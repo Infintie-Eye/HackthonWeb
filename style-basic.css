@@ -1,0 +1,87 @@
+<link rel="stylesheet" type="text/css" href="style-basic.css">
+ header 
+ {
+            left: 50%;
+            right: 50%;
+ }
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);     
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffdfa3;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #737dfd;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #ff8080;
+        }
+
+        
+        .emergency-container {
+            background-color: hsl(153, 98%, 76%);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .emergency-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .emergency-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .emergency-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffc56e;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .emergency-container button:hover {
+            background-color: #8aff6a;
+        }
