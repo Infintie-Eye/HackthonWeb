@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Rescue Emergency Contact</title>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: url("dogs.jpg");
+            background-size: cover;
+            color: beige;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(167, 131, 99);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 0 15px; /* Equal margin on left and right */
+            text-align: center; /* Center text content */
+        }
+        h1, h2, h3 {
+            color: beige;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center; /* Center form items */
+        }
+        input, textarea, button {
+            width: calc(100% - 20px); /* Adjust for padding */
+            max-width: 400px; /* Set a max-width for inputs */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emergency Animal Rescue</h1>
+        <p>If you find an injured animal, please contact us immediately using the form below.</p>
+        <form id="join-form" method="POST">
+            <label for="location">Location of Injured Animal</label>
+            <input type="text" id="location" name="location" placeholder="Enter the location" required aria-label="Location of Injured Animal">
+
+            <label for="details">Details</label>
+            <textarea id="details" name="details" rows="4" placeholder="Describe the animal's condition" required aria-label="Details about the animal"></textarea>
+
+            <button type="button" onclick="submitForm()">Contact Us</button> <!-- Change to type="button" -->
+            <hr>
+            <h2>OR</h2>
+            <h3>Contact us: 9988222992<br>
+                <a href="mailto:info@snugglesquadrescue.org" style="color: white;">info@snugglesquadrescue.org</a>
+            </h3>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Validate form fields if necessary
+            const location = document.getElementById('location').value;
+            const details = document.getElementById('details').value;
+
+            if (location && details) {
+                // Redirect to another website
+                window.location.href = 'egthanks.html'; // Replace with your desired URL
+            } else {
+                alert('Please fill in all fields before contacting us.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -9,15 +9,111 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="style-basic.css">
+  <style>
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .btn {
+      transition: transform 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+header {
+  background-color: rgba(190, 128, 48, 0.715);
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+header p {
+  font-style: italic;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px; /* Font size for button */
+  font-style: italic; /* Italic text */
+}
+
+/* Join Us Section */
+.login-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  background-image : url('animal1.webp');
+  background-repeat :no-repeat;
+  background-attachment :scroll;
+  background-size :cover;
+}
+
+.login-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius:5cap;
+}
+
+.card-body {
+  padding: 40px;
+  color:#000000;
+  border-radius: 5cap;
+  overflow: hidden;                      
+  text-align: center;  
+}
+.card-body h2 {
+  font-weight:bold;
+  color:#000000;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.card-body p {
+  color:#000000;
+  margin-bottom: 20px;
+}
+p {
+  color: #6c757d;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 3cap; 
+  transition: transform 0.3s;
+}
+
+.emergency-btn {
+  background-color: #ff132a;
+  color: white;
+}
+
+.emergency-btn:hover {
+  background-color: #ce0a1e;
+}
+
+.donate-btn {
+  background-color: #0de53f;
+  color: white;
+}
+
+.donate-btn:hover {
+  background-color: #00b527;
+}
+  </style>
 </head>
 <body>
-
   <!-- Header Section with Quote -->
   <header>
     <p>"The life of a stray animal is one of hardship, but together we can make a difference."</p>
   </header>
-
   <!-- Join Us Section -->
   <section class="login-section">
     <div class="container">
@@ -25,10 +121,9 @@
         <div class="col-md-6">
           <div class="card login-card">
             <div class="card-body">
-              <img src="animal1.webp" alt="Background Image" class="background-image">
               <h2 class="text-center">Animal Help</h2>
               <p class="text-center mb-4">Become a part of the mission to help stray animals.</p>
-              <form>
+              <form id="join-form" action="your-action-url" method="POST">
                 <div class="mb-3">
                   <label for="username" class="form-label">Username / Member-name</label>
                   <input type="text" class="form-control" id="username" placeholder="Enter your username or member name" required>
@@ -42,8 +137,8 @@
               <hr>
               <div class="text-center mt-4">
                 <h4>Join the cause—what's your next step?</h4>
-                <a href="#emergency" class="btn emergency-btn w-100 mt-3">Emergency Help</a>
-                <a href="#donate" class="btn donate-btn w-100 mt-3">Donate to Help Animals</a>
+                <a href="emergency.html" class="btn emergency-btn w-100 mt-3">Emergency Help</a>
+                <a href="donationpage.html" class="btn donate-btn w-100 mt-3">Donate to Help Animals</a>
               </div>
             </div>
           </div>
@@ -51,8 +146,24 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('join-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+  
+      // Perform any additional validation if needed
+      const username = document.getElementById('username').value;
+      const contact = document.getElementById('contact').value;
+  
+      if (username && contact) { // Check if inputs are filled
+        // Redirect to the new page after filling out the form
+        window.location.href = 'joinus.html'; // Change this to your target page URL
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  </script>
 </body>
 </html>
